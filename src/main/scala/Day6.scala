@@ -1,5 +1,3 @@
-import Day5.drawHor
-
 import java.lang.System
 import scala.io.Source
 
