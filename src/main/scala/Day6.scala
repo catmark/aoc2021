@@ -13,7 +13,7 @@ object Day6:
     fishes(6) += newFishes
   }
 
-  def run(): Unit = {
+  def countFish(days: Int): Long =
     val data = loadFile()
 
     val fishes: collection.mutable.Map[Int, Long] = collection.mutable.Map().withDefaultValue(0)
@@ -22,12 +22,10 @@ object Day6:
     fishes(0) = 0
     fishes(7) = 0
     fishes(8) = 0
+    (1 to days).foreach(_ => passDay(fishes))
+    fishes.values.sum
 
-    (1 to 256).foreach(_ => passDay(fishes))
+  def run(): Unit = println(countFish(80))
 
-    println(fishes.values.sum)
-  }
-
-  def runb(): Unit =
-    val data = loadFile()
+  def runb(): Unit = println(countFish(256))
 
