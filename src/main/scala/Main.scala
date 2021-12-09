@@ -29,6 +29,10 @@
     println("Day8")
     Day8.run()
     Day8.runb()
+
+//    println("Day9")
+//    Day9.run()
+//    Day9.runb()
 }
 
 

@@ -20,30 +20,20 @@ object Day8:
 
   def decode(code: Code): Int =
     val mapping = collection.mutable.Map[Int, String]()
-    code.input.foreach(str => {
+    code.input.sortWith((a,b) => if (a.length == 5) false else a.length < b.length).foreach(str => {
       str.length match {
         case 2 => mapping += (1 -> str)
         case 4 => mapping += (4 -> str)
         case 3 => mapping += (7 -> str)
         case 7 => mapping += (8 -> str)
+        case 6 if containsAll(str, mapping(4)) => mapping += (9 -> str)
+        case 6 if containsAll(str, mapping(1)) => mapping += (0 -> str)
+        case 6 => mapping += (6 -> str)
+        case 5 if containsAll(str, mapping(1)) => mapping += (3 -> str)
+        case 5 if containsAll(mapping(6), str) => mapping += (5 -> str)
+        case 5 => mapping += (2 -> str)
         case _ =>
       }
-    })
-    code.input.filter(_.length == 6).foreach(str => {
-       if (containsAll(str, mapping(4)))
-         mapping += (9 -> str)
-       else if (containsAll(str, mapping(1)))
-         mapping += (0 -> str)
-       else
-         mapping += (6 -> str)
-    })
-    code.input.filter(_.length == 5).foreach(str => {
-      if (containsAll(str, mapping(1)))
-        mapping += (3 -> str)
-      else if (containsAll(mapping(6), str))
-        mapping += (5 -> str)
-      else
-        mapping += (2 -> str)
     })
     val lookup = mapping.toList
     var result = 0
@@ -55,6 +45,8 @@ object Day8:
     println(countEasy(data))
 
   def runb(): Unit =
+    val start = System.currentTimeMillis()
     val codes = loadFile().map(toCode)
     println(codes.map(decode).sum)
+    println(System.currentTimeMillis() - start)
 
