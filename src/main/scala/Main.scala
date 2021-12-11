@@ -30,9 +30,17 @@
 //    Day8.run()
 //    Day8.runb()
 
-    println("Day9")
-    Day9.run()
-    Day9.runb()
+//    println("Day9")
+//    Day9.run()
+//    Day9.runb()
+
+    println("Day10")
+    Day10.run()
+    Day10.runb()
+
+    println("Day11")
+    Day11.run()
+    Day11.runb()
 }
 
 
