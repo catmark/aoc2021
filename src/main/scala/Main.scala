@@ -34,13 +34,21 @@
 //    Day9.run()
 //    Day9.runb()
 
-    println("Day10")
-    Day10.run()
-    Day10.runb()
+//    println("Day10")
+//    Day10.run()
+//    Day10.runb()
+//
+//    println("Day11")
+//    Day11.run()
+//    Day11.runb()
 
-    println("Day11")
-    Day11.run()
-    Day11.runb()
+    println("Day12")
+    Day12.run()
+    Day12.runb()
+
+//    println("Day13")
+//    Day13.run()
+//    Day13.runb()
 }
 
 
