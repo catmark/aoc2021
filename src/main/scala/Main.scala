@@ -42,13 +42,41 @@
 //    Day11.run()
 //    Day11.runb()
 
-    println("Day12")
-    Day12.run()
-    Day12.runb()
+//    println("Day12")
+//    Day12.run()
+//    Day12.runb()
 
 //    println("Day13")
 //    Day13.run()
 //    Day13.runb()
+
+//    println("Day14")
+//    Day14.run()
+//    Day14.runb()
+
+//    println("Day15")
+//    Day15.run()
+//    Day15.runb()
+
+//    println("Day16")
+//    Day16.run()
+//    Day16.runb()
+
+//    println("Day17")
+//    Day17.run()
+//    Day17.runb()
+
+    println("Day18")
+    Day18.run()
+    Day18.runb()
+
+//    println("Day19")
+//    Day19.run()
+//    Day19.runb()
+
+//    println("Day20")
+//    Day20.run()
+//    Day20.runb()
 }
 
 
